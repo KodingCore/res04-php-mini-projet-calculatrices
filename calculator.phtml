@@ -1,0 +1,28 @@
+<?php
+
+$result = 0;
+
+?>
+
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <h2>Result: <?=$result?></h2>
+    <form action="index.php" method="POST">
+        <input type="number" name="nbr_one" id="nbr_one"/>
+        <input type="number" name="nbr_two" id="nbr_two"/>
+        <select name="operator" id="operator">
+            <option value="X">X</option>
+            <option value="/">/</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="%">%</option>
+        </select>
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
