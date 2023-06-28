@@ -1,9 +1,3 @@
-<?php
-
-$result = 0;
-
-?>
-
 <!doctype html>
 <html lang="fr">
 <head>
@@ -11,7 +5,9 @@ $result = 0;
     <title>Calculator</title>
 </head>
 <body>
-    <h2>Result: <?=$result?></h2>
+    <h2>Result: <?php
+    if(isset($result)){
+    echo $result;}?></h2>
     <form action="index.php" method="POST">
         <input type="number" name="nbr_one" id="nbr_one"/>
         <input type="number" name="nbr_two" id="nbr_two"/>
@@ -21,6 +17,8 @@ $result = 0;
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="%">%</option>
+            <option value="^">^</option>
+            <option value="!">!</option>
         </select>
         <input type="submit" value="Submit"/>
     </form>
